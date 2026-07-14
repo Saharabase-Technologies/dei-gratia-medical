@@ -27,14 +27,11 @@ export const metadata: Metadata = {
   description:
     "Modern medicine and compassionate care in Tamale, Northern Region. Maternal & child health, 24/7 emergency care, laboratory, imaging and more. NHIS accepted.",
   icons: {
-    // The Dei Gratia seal as the favicon. A white version is served to dark-
-    // theme browser tabs so the mark stays visible; the colour seal is the
-    // fallback (visible on the usual light tab bar) for browsers that ignore
-    // the prefers-color-scheme media query on icons.
+    // The Dei Gratia seal on a navy tile, so the white mark stays legible on
+    // both light and dark browser tabs (a bare seal washes out at 16px).
     icon: [
-      { url: "/icon-dark.png", type: "image/png", sizes: "64x64", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon-light.png", type: "image/png", sizes: "64x64", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-light.png", type: "image/png", sizes: "64x64" },
+      { url: "/icon.png", type: "image/png", sizes: "64x64" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
     ],
     apple: { url: "/apple-icon.png", sizes: "180x180" },
   },
