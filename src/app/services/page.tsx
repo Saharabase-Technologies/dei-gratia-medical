@@ -97,8 +97,8 @@ function ServicesHeader() {
 const svc = (href: string) => services.find((s) => s.href === href)!;
 
 /**
- * The opening chapter is a split hero: the two moments that matter most —
- * a new life and an emergency — shown side by side as one band, each half a
+ * The opening chapter is a split hero: the two moments that matter most -
+ * a new life and an emergency - shown side by side as one band, each half a
  * photo with its own tagline and link.
  */
 const diptych = [

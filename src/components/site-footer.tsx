@@ -15,7 +15,7 @@ export function SiteFooter() {
 
   return (
     <footer className="pt-8 md:pt-12">
-      {/* Curved navy panel — full-bleed background, content held to nav width. */}
+      {/* Curved navy panel - full-bleed background, content held to nav width. */}
       <div
         className="relative overflow-hidden rounded-t-[2.25rem] text-navy-200 md:rounded-t-[3rem]"
         style={{ background: "linear-gradient(158deg, #16294a 0%, #0e1a2e 58%)" }}
@@ -60,7 +60,7 @@ export function SiteFooter() {
               </div>
             </div>
 
-            {/* Four compact columns — 2×2 on mobile, a row on desktop */}
+            {/* Four compact columns - 2×2 on mobile, a row on desktop */}
             <div className="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-4">
               <FooterNav label="Explore">
                 {[{ label: "Home", href: "/" }, ...primaryNav].map((item) => (
@@ -145,7 +145,7 @@ export function SiteFooter() {
             </p>
           </div>
 
-          {/* Maker credit — given its own line, made prominent */}
+          {/* Maker credit - given its own line, made prominent */}
           <div className="mt-5 flex items-center justify-center gap-2 border-t border-white/10 pt-5 text-center">
             <span className="text-[12.5px] text-navy-400">Designed &amp; built by</span>
             <a
@@ -172,7 +172,7 @@ function ColHeading({ children }: { children: React.ReactNode }) {
 
 function FooterNav({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <nav aria-label={`Footer — ${label.toLowerCase()}`}>
+    <nav aria-label={`Footer ${label.toLowerCase()}`}>
       <ColHeading>{label}</ColHeading>
       <ul className="space-y-2">{children}</ul>
     </nav>

@@ -23,7 +23,7 @@ export function BlogIndex({ posts, tags }: { posts: Post[]; tags: string[] }) {
 
   return (
     <section aria-label="Latest posts" className="mx-auto max-w-310 px-5 py-16 md:px-8 md:py-24">
-      {/* Featured lead — only on the unfiltered view */}
+      {/* Featured lead - only on the unfiltered view */}
       {active === "All" && featured && (
         <Reveal className="mb-14">
           <Link

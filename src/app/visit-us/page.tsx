@@ -46,7 +46,7 @@ const softBand: CSSProperties = {
 };
 
 /* ------------------------------------------------------------------ */
-/* 1 · Header — address + the actions people actually want            */
+/* 1 · Header - address + the actions people actually want            */
 /* ------------------------------------------------------------------ */
 
 function VisitHeader() {

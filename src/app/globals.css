@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 /* ============================================================
-   Dei Gratia Medical Services — Foundation tokens (light only)
-   Direction: clean, soft, blue-forward and custom — navy as the
+   Dei Gratia Medical Services - Foundation tokens (light only)
+   Direction: clean, soft, blue-forward and custom - navy as the
    deep anchor, a confident blue as the single accent, cool light
    greys as grounds, teal kept only as a quiet health cue. No gold.
    ============================================================ */
 
 @theme {
-  /* --- Navy — the deep anchor (dark cards, buttons, headings) ---- */
+  /* --- Navy - the deep anchor (dark cards, buttons, headings) ---- */
   --color-navy-50: #eef2f7;
   --color-navy-100: #d8e0ec;
   --color-navy-200: #b2c1d6;
@@ -21,7 +21,7 @@
   --color-navy-900: #142138;
   --color-navy-950: #0e1a2e;
 
-  /* --- Blue — the single accent (links, highlights, CTAs) -------- */
+  /* --- Blue - the single accent (links, highlights, CTAs) -------- */
   --color-blue-50: #eef4fe;
   --color-blue-100: #dbe7fb;
   --color-blue-200: #bcd2f7;
@@ -33,7 +33,7 @@
   --color-blue-800: #1d3d7d;
   --color-blue-900: #1b3462;
 
-  /* --- Slate — cool neutral grounds & text ---------------------- */
+  /* --- Slate - cool neutral grounds & text ---------------------- */
   --color-slate-50: #f6f8fb;
   --color-slate-100: #eef1f6;
   --color-slate-200: #e3e8ef;
@@ -45,7 +45,7 @@
   --color-slate-800: #2c333d;
   --color-slate-900: #1a2029;
 
-  /* --- Teal — a quiet health cue only (checkmarks, 24/7) -------- */
+  /* --- Teal - a quiet health cue only (checkmarks, 24/7) -------- */
   --color-teal-50: #e9f7f5;
   --color-teal-100: #cdeeea;
   --color-teal-400: #30c1b3;
@@ -74,7 +74,7 @@
 }
 
 /* ============================================================
-   Semantic tokens — components reference these, never raw ramps.
+   Semantic tokens - components reference these, never raw ramps.
    ============================================================ */
 :root {
   --background: #ffffff;
@@ -83,20 +83,20 @@
   --panel-soft: var(--color-slate-50);
   --accent-soft: var(--color-blue-50);
 
-  --foreground: #1a2a44;              /* navy ink — headings */
-  --body: #556070;                   /* cool grey — running text */
+  --foreground: #1a2a44;              /* navy ink - headings */
+  --body: #556070;                   /* cool grey - running text */
   --muted-foreground: #8b94a2;
   --border: #e5eaf1;                  /* cool hairline */
 
-  --primary: #1a2a44;                /* navy — the workhorse button */
+  --primary: #1a2a44;                /* navy - the workhorse button */
   --primary-hover: #122036;
   --primary-foreground: #ffffff;
 
-  --accent: var(--color-blue-500);   /* blue — links & highlights */
+  --accent: var(--color-blue-500);   /* blue - links & highlights */
   --accent-hover: var(--color-blue-600);
   --accent-foreground: #ffffff;
 
-  --secondary: var(--color-teal-600);/* teal — quiet health cue */
+  --secondary: var(--color-teal-600);/* teal - quiet health cue */
   --secondary-foreground: #ffffff;
 
   --emergency: var(--color-emergency-500);
@@ -161,7 +161,7 @@
 }
 
 /* ============================================================
-   Motion system — one easing curve everywhere, so every element
+   Motion system - one easing curve everywhere, so every element
    on the site moves like it belongs to the same hand.
    ============================================================ */
 :root {
@@ -223,7 +223,7 @@
   }
 }
 
-/* --- Aurora — slow drifting light inside the navy panels ------------ */
+/* --- Aurora - slow drifting light inside the navy panels ------------ */
 @keyframes aurora-drift-a {
   from { transform: translate3d(-8%, -6%, 0) scale(1); }
   to   { transform: translate3d(10%, 8%, 0) scale(1.18); }
@@ -275,7 +275,7 @@
 .notch::before { left: 0; top: -28px; }     /* fillet above the shelf   */
 .notch::after  { right: -28px; bottom: 0; } /* fillet right of the shelf */
 
-/* --- Marquee — the factual ticker strip ------------------------------ */
+/* --- Marquee - the factual ticker strip ------------------------------ */
 @keyframes marquee-scroll {
   to { transform: translateX(-50%); }
 }

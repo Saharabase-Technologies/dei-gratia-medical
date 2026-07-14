@@ -18,7 +18,7 @@ export function BrandMark({
   const wordColor = warm ? "#f2ede2" : inverted ? "#fff" : "var(--foreground)";
   const subColor = warm ? "var(--color-blue-300)" : inverted ? "#fff" : "var(--primary)";
   return (
-    <Link href="/" className="group flex items-center gap-3" aria-label={`${site.name} — home`}>
+    <Link href="/" className="group flex items-center gap-3" aria-label={`${site.name}, home`}>
       <picture>
         <source srcSet={`${logo}.avif`} type="image/avif" />
         <img

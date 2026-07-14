@@ -12,7 +12,7 @@ export const site = {
   tagline: "Trusted hands, by grace",
   signoff: "Dei Gratia, by the grace of God.",
 
-  // Contact — confirmed from the flyer
+  // Contact - confirmed from the flyer
   phone: { display: "054 673 1001", href: "tel:+233546731001" },
   phoneAlt: { display: "020 764 2170", href: "tel:+233207642170" },
   whatsapp: { display: "054 673 1001", href: "https://wa.me/233546731001" },
@@ -38,8 +38,8 @@ export const site = {
   mapsHref: "https://www.google.com/maps/search/?api=1&query=9.496242,-0.844425",
 
   // OPD hours, confirmed with the client.
-  hours: "8am – 10pm daily",
-  hoursShort: "8am – 10pm",
+  hours: "8am to 10pm daily",
+  hoursShort: "8am to 10pm",
   social: {
     facebook: PLACEHOLDER,
     instagram: PLACEHOLDER,
@@ -51,7 +51,7 @@ export const site = {
 } as const;
 
 /**
- * Booking runs through WhatsApp everywhere — every "Book an appointment"
+ * Booking runs through WhatsApp everywhere - every "Book an appointment"
  * button opens a chat with the message ready to send, rather than routing
  * to the contact page.
  */
@@ -91,7 +91,7 @@ export type Service = {
   image?: string;
 };
 
-/** Services hub — ordered to lead with the flagship and emergency (per the brief). */
+/** Services hub - ordered to lead with the flagship and emergency (per the brief). */
 export const services: Service[] = [
   {
     title: "Maternal & Child Health",
@@ -161,7 +161,7 @@ export const services: Service[] = [
 ];
 
 /**
- * Hero background photos — cross-fade in the order listed.
+ * Hero background photos - cross-fade in the order listed.
  * PLACEHOLDER imagery: swap the `src` values for the client's own facility
  * and staff photos when they arrive (keep them ~1920px wide, avif + webp).
  */

@@ -92,7 +92,7 @@ function Hero() {
           </p>
         </div>
 
-        {/* Notched CTA shelf — the page flows into the panel (desktop) */}
+        {/* Notched CTA shelf - the page flows into the panel (desktop) */}
         <div className="notch hidden md:block">
           <div className="flex items-center gap-3">
             <a
@@ -211,7 +211,7 @@ function QuickAccess() {
 }
 
 /* ------------------------------------------------------------------ */
-/* 3 · Marquee — the factual ticker                                    */
+/* 3 · Marquee - the factual ticker                                    */
 /* ------------------------------------------------------------------ */
 
 const marqueeItems = [
@@ -248,7 +248,7 @@ function Marquee() {
 }
 
 /* ------------------------------------------------------------------ */
-/* 4 · Why we exist — Care, by grace                                   */
+/* 4 · Why we exist - Care, by grace                                   */
 /* ------------------------------------------------------------------ */
 
 function Grace() {
@@ -491,7 +491,7 @@ function VisitUs() {
           </ul>
         </div>
 
-        {/* Directions panel — stands in for the map embed until [MAP_EMBED] arrives */}
+        {/* Directions panel - stands in for the map embed until [MAP_EMBED] arrives */}
         <Reveal delay={150} className="lg:pt-6">
           <div className="relative flex h-full min-h-105 flex-col justify-between overflow-hidden rounded-4xl bg-navy-900 p-8 md:p-10">
             <div
@@ -675,7 +675,7 @@ function ClosingInvitation() {
 }
 
 /* ------------------------------------------------------------------ */
-/* Structured data — MedicalOrganization (per the SEO checklist)       */
+/* Structured data - MedicalOrganization (per the SEO checklist)       */
 /* ------------------------------------------------------------------ */
 
 function OrganizationSchema() {

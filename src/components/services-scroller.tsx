@@ -71,7 +71,7 @@ export function ServicesScroller({ cta }: { cta?: ReactNode }) {
               href={service.href}
               className="lift group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface"
             >
-              {/* Image slot — photo tinted with the card's brand colour */}
+              {/* Image slot - photo tinted with the card's brand colour */}
               <div
                 className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${panelTone[service.tone]}`}
               >

@@ -66,7 +66,7 @@ function ContactHeader() {
 }
 
 /* ------------------------------------------------------------------ */
-/* 2 · The ways to reach us — big, tappable, done                      */
+/* 2 · The ways to reach us - big, tappable, done                      */
 /* ------------------------------------------------------------------ */
 
 type Tile = {
@@ -100,7 +100,7 @@ function Ways() {
   return (
     <section aria-label="Ways to reach us" className="mx-auto max-w-310 px-5 pt-16 pb-8 md:px-8 md:pt-20">
       <div className="mx-auto max-w-2xl space-y-3">
-        {/* Booking — the primary action, straight to WhatsApp */}
+        {/* Booking - the primary action, straight to WhatsApp */}
         <Reveal>
           <a
             href={bookingHref}
@@ -162,7 +162,7 @@ function Ways() {
 }
 
 /* ------------------------------------------------------------------ */
-/* 3 · Emergency — highlighted                                         */
+/* 3 · Emergency - highlighted                                         */
 /* ------------------------------------------------------------------ */
 
 function EmergencyHighlight() {

@@ -8,7 +8,7 @@ import { Icon } from "@/components/icon";
 import { site, primaryNav, bookingHref } from "@/config/site";
 
 /**
- * Sticky header — quiet at the top of the page, gains a glass blur and
+ * Sticky header - quiet at the top of the page, gains a glass blur and
  * hairline once scrolled. Desktop: brand · nav · emergency call · CTA.
  * Mobile: full-screen navy overlay with staggered serif links.
  */
