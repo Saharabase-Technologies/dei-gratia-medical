@@ -1,0 +1,387 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Dei Gratia Medical Services — Foundation tokens (light only)
+   Direction: clean, soft, blue-forward and custom — navy as the
+   deep anchor, a confident blue as the single accent, cool light
+   greys as grounds, teal kept only as a quiet health cue. No gold.
+   ============================================================ */
+
+@theme {
+  /* --- Navy — the deep anchor (dark cards, buttons, headings) ---- */
+  --color-navy-50: #eef2f7;
+  --color-navy-100: #d8e0ec;
+  --color-navy-200: #b2c1d6;
+  --color-navy-300: #839abb;
+  --color-navy-400: #55708f;
+  --color-navy-500: #385372;
+  --color-navy-600: #294056;
+  --color-navy-700: #1f3247;
+  --color-navy-800: #1a2a44;
+  --color-navy-900: #142138;
+  --color-navy-950: #0e1a2e;
+
+  /* --- Blue — the single accent (links, highlights, CTAs) -------- */
+  --color-blue-50: #eef4fe;
+  --color-blue-100: #dbe7fb;
+  --color-blue-200: #bcd2f7;
+  --color-blue-300: #8fb2f1;
+  --color-blue-400: #5b8ce8;
+  --color-blue-500: #2f6bd8;
+  --color-blue-600: #2559bd;
+  --color-blue-700: #1f489a;
+  --color-blue-800: #1d3d7d;
+  --color-blue-900: #1b3462;
+
+  /* --- Slate — cool neutral grounds & text ---------------------- */
+  --color-slate-50: #f6f8fb;
+  --color-slate-100: #eef1f6;
+  --color-slate-200: #e3e8ef;
+  --color-slate-300: #cfd6e0;
+  --color-slate-400: #a7b1bf;
+  --color-slate-500: #7a8494;
+  --color-slate-600: #5b6472;
+  --color-slate-700: #434b57;
+  --color-slate-800: #2c333d;
+  --color-slate-900: #1a2029;
+
+  /* --- Teal — a quiet health cue only (checkmarks, 24/7) -------- */
+  --color-teal-50: #e9f7f5;
+  --color-teal-100: #cdeeea;
+  --color-teal-400: #30c1b3;
+  --color-teal-500: #16a496;
+  --color-teal-600: #0e857a;
+  --color-teal-700: #106a63;
+
+  /* --- Emergency -------------------------------------------------- */
+  --color-emergency-50: #fceceb;
+  --color-emergency-500: #d1453d;
+  --color-emergency-600: #b83730;
+
+  /* --- Type ------------------------------------------------------- */
+  --font-sans: var(--font-open-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-merriweather), ui-serif, Georgia, "Times New Roman", serif;
+
+  /* --- Radii ------------------------------------------------------ */
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 999px;
+
+  /* --- Soft, cool shadows (never heavy) -------------------------- */
+  --shadow-card: 0 1px 2px rgba(20, 33, 56, 0.04), 0 14px 34px -20px rgba(20, 33, 56, 0.22);
+}
+
+/* ============================================================
+   Semantic tokens — components reference these, never raw ramps.
+   ============================================================ */
+:root {
+  --background: #ffffff;
+  --surface: #ffffff;
+  --panel: var(--color-slate-100);   /* light grey bands */
+  --panel-soft: var(--color-slate-50);
+  --accent-soft: var(--color-blue-50);
+
+  --foreground: #1a2a44;              /* navy ink — headings */
+  --body: #556070;                   /* cool grey — running text */
+  --muted-foreground: #8b94a2;
+  --border: #e5eaf1;                  /* cool hairline */
+
+  --primary: #1a2a44;                /* navy — the workhorse button */
+  --primary-hover: #122036;
+  --primary-foreground: #ffffff;
+
+  --accent: var(--color-blue-500);   /* blue — links & highlights */
+  --accent-hover: var(--color-blue-600);
+  --accent-foreground: #ffffff;
+
+  --secondary: var(--color-teal-600);/* teal — quiet health cue */
+  --secondary-foreground: #ffffff;
+
+  --emergency: var(--color-emergency-500);
+  --emergency-hover: var(--color-emergency-600);
+  --emergency-foreground: #ffffff;
+
+  --ring: var(--color-blue-400);
+  color-scheme: light;
+}
+
+/* Expose semantic tokens as utilities (bg-primary, text-accent, …). */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-panel: var(--panel);
+  --color-panel-soft: var(--panel-soft);
+  --color-accent-soft: var(--accent-soft);
+  --color-foreground: var(--foreground);
+  --color-body: var(--body);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-emergency: var(--emergency);
+  --color-emergency-hover: var(--emergency-hover);
+  --color-emergency-foreground: var(--emergency-foreground);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background: var(--background);
+    color: var(--body);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--foreground);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  ::selection {
+    background: var(--color-blue-100);
+    color: var(--foreground);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+/* ============================================================
+   Motion system — one easing curve everywhere, so every element
+   on the site moves like it belongs to the same hand.
+   ============================================================ */
+:root {
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- Scroll reveals (driven by <Reveal /> via IntersectionObserver) ---
+   Gated behind `html.js` (set inline in the layout) so content is never
+   hidden for users whose JavaScript is slow, blocked, or missing. */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 0.9s var(--ease-smooth),
+      transform 0.9s var(--ease-smooth);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .js [data-reveal].is-inview {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- Hero entrance (pure CSS, runs on load) ------------------------- */
+@keyframes hero-rise {
+  from { transform: translateY(112%); }
+  to   { transform: none; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(14px) scale(0.992); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em; /* keep serif descenders inside the mask */
+  margin-bottom: -0.08em;
+}
+.hero-line > span {
+  display: block;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-panel { animation: panel-in 1s var(--ease-smooth) both; }
+  .hero-line > span {
+    transform: translateY(112%);
+    animation: hero-rise 1.1s var(--ease-smooth) both;
+    animation-delay: var(--rise-delay, 0.15s);
+  }
+  .hero-fade {
+    opacity: 0;
+    animation: fade-up 0.9s var(--ease-smooth) both;
+    animation-delay: var(--rise-delay, 0.6s);
+  }
+}
+
+/* --- Aurora — slow drifting light inside the navy panels ------------ */
+@keyframes aurora-drift-a {
+  from { transform: translate3d(-8%, -6%, 0) scale(1); }
+  to   { transform: translate3d(10%, 8%, 0) scale(1.18); }
+}
+@keyframes aurora-drift-b {
+  from { transform: translate3d(6%, 10%, 0) scale(1.1); }
+  to   { transform: translate3d(-10%, -6%, 0) scale(0.94); }
+}
+.aurora {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(70px);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .aurora-a { animation: aurora-drift-a 16s var(--ease-smooth) infinite alternate; }
+  .aurora-b { animation: aurora-drift-b 20s var(--ease-smooth) infinite alternate; }
+}
+
+/* Faint cross-grid texture for dark panels (the brand cross, whispered). */
+.cross-grid {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1.5px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent 75%);
+}
+
+/* --- Notched CTA cutout (Apex-style inverted corners) ---------------
+   A white shelf sits over the hero panel's bottom-left corner; the two
+   quarter-circle fillets are painted with radial-gradients so the page
+   background appears to flow into the panel. --------------------------*/
+.notch {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  background: var(--background);
+  border-top-right-radius: 28px;
+  padding: 16px 16px 0 0;
+}
+.notch::before,
+.notch::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: radial-gradient(circle at 100% 0%, transparent 27.5px, var(--background) 28px);
+}
+.notch::before { left: 0; top: -28px; }     /* fillet above the shelf   */
+.notch::after  { right: -28px; bottom: 0; } /* fillet right of the shelf */
+
+/* --- Marquee — the factual ticker strip ------------------------------ */
+@keyframes marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* --- Nav link underline (grows from the left on hover) --------------- */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease-smooth);
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* --- Card hover: lift + arrow slide ---------------------------------- */
+.lift {
+  transition:
+    transform 0.55s var(--ease-smooth),
+    box-shadow 0.55s var(--ease-smooth),
+    border-color 0.55s var(--ease-smooth);
+}
+@media (hover: hover) {
+  .lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+  }
+}
+.arrow-slide {
+  transition: transform 0.45s var(--ease-smooth);
+}
+a:hover .arrow-slide,
+.lift:hover .arrow-slide {
+  transform: translateX(5px);
+}
+
+/* --- Mobile menu (staggered rise once open) --------------------------- */
+.menu-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s var(--ease-smooth),
+    transform 0.6s var(--ease-smooth);
+  transition-delay: var(--menu-delay, 0ms);
+}
+.menu-open .menu-item {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Horizontal scroller: hide the scrollbar, keep the scroll -------- */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Hero: cross-fading photo stack + legibility overlay ------------- */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 1; /* active slide is visible by default; inactive ones fade out */
+  transition: opacity 1.4s var(--ease-smooth);
+}
+.hero-slide:not(.is-active) {
+  opacity: 0;
+}
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* slow, calm push-in so the still image feels alive */
+  animation: hero-pan 12s var(--ease-smooth) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide img { animation: none; }
+}
+@keyframes hero-pan {
+  from { transform: scale(1.08); }
+  to   { transform: scale(1); }
+}
+/* Navy wash so white headline text always holds contrast on any photo. */
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(14, 26, 46, 0.9) 0%, rgba(14, 26, 46, 0.6) 45%, rgba(14, 26, 46, 0.12) 100%),
+    linear-gradient(0deg, rgba(14, 26, 46, 0.7) 0%, rgba(14, 26, 46, 0) 42%);
+}
